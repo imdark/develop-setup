@@ -23,4 +23,7 @@ sudo docker login
 # Download sublime text https://www.sublimetext.com/3
 
 # install albert, app launcher
-sudo apt-get install albert 
+sudo apt-get install albert
+
+# install chrome
+sudo apt-get install google-chrome
