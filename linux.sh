@@ -1,6 +1,5 @@
 #! /bin/bash
 
-
 # setup vi as default editor
 sudo update-alternatives --config editor
 
@@ -22,3 +21,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo docker login
 
 # Download sublime text https://www.sublimetext.com/3
+
+# install albert, app launcher
+sudo apt-get install albert 
