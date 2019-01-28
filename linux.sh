@@ -30,3 +30,6 @@ sudo apt-get install google-chrome
 
 # install a text comperison
 sudo apt-get install meld
+
+# very usful calculator
+sudo apt-get install speedcrunch
