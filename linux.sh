@@ -27,3 +27,6 @@ sudo apt-get install albert
 
 # install chrome
 sudo apt-get install google-chrome
+
+# install a text comperison
+sudo apt-get install meld
