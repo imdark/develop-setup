@@ -33,3 +33,18 @@ sudo apt-get install meld
 
 # very usful calculator
 sudo apt-get install speedcrunch
+
+
+# aut detect and configure external displays when connected to 
+cat > ~/.resize-windows.sh << EOF
+#!/bin/bash
+export DISPLAY=:0
+export XAUTHORITY=/home/development/.Xauthority
+xrandr --output DP-2-1 --mode 3840x1080 --rate 60 --output eDP-1 --mode 1920x1080 --pos 1000x1080
+xrandr --output DP2-1 --mode 1920x1080 --rate 60 --output eDP1 --mode 1920x1080 --pos 1000x1080
+xrandr --output DP2-1 --mode 3840x1080 --rate 60 --output eDP1 --mode 1920x1080 --pos 1000x1080
+EOF
+
+cat >> /etc/udev/rules.d/99-external-display.rules << EOF
+SUBSYSTEM=="drm", ACTION=="add", RUN+="/home/development/.resize-windows.sh" OPTIONS="last_rule"
+EOF
