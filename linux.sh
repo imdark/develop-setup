@@ -48,3 +48,7 @@ EOF
 cat >> /etc/udev/rules.d/99-external-display.rules << EOF
 SUBSYSTEM=="drm", ACTION=="add", RUN+="/home/development/.resize-windows.sh" OPTIONS="last_rule"
 EOF
+
+
+#to fix a bug where xfce does not accept password after wake up from hibernation
+sudo apt remove gnome-screensaver
